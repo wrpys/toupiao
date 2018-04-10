@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+	<package name="liu" extends="struts-default">
+		<global-results>
+			<result name="succeed">/common/succeed.jsp</result>
+			<result name="successAdd">/common/add_success.jsp</result>
+			<result name="msg">/common/msg.jsp</result>
+		</global-results>
+
+		<action name="upload" class="com.util.upload" method="upload">
+			<result name="success">/upload/upload_re.jsp</result>
+		</action>
+
+
+		<action name="index" class="indexAction" method="index">
+			<result name="success">/qiantai/index.jsp</result>
+		</action>
+		<!-- 本站介绍 -->
+		<action name="introductionIOfSite" class="indexAction" method="introductionIOfSite">
+			<result name="success">/qiantai/introductionIOfSite.jsp</result>
+		</action>
+
+
+		<action name="userReg" class="userAction" method="userReg">
+		</action>
+		<action name="userEdit" class="userAction" method="userEdit">
+		</action>
+		<action name="userLogin" class="userAction" method="userLogin">
+		</action>
+		<action name="userLogout" class="userAction" method="userLogout">
+			<result name="success">/qiantai/default.jsp</result>
+		</action>
+		<action name="userDel" class="userAction" method="userDel">
+		</action>
+		<action name="userMana" class="userAction" method="userMana">
+			<result name="success">/admin/user/userMana.jsp</result>
+		</action>
+		<action name="userXinxi" class="userAction" method="userXinxi">
+			<result name="success">/admin/order/userXinxi.jsp</result>
+		</action>
+
+
+
+
+
+		<action name="adminAdd" class="adminAction" method="adminAdd">
+		</action>
+		<action name="adminDel" class="adminAction" method="adminDel">
+		</action>
+		<action name="adminMana" class="adminAction" method="adminMana">
+			<result name="success">/admin/admin/adminMana.jsp</result>
+		</action>
+
+
+
+
+		<action name="gonggaoAdd" class="gonggaoAction" method="gonggaoAdd">
+		</action>
+		<action name="gonggaoDel" class="gonggaoAction" method="gonggaoDel">
+		</action>
+		<action name="gonggaoMana" class="gonggaoAction" method="gonggaoMana">
+			<result>/admin/gonggao/gonggaoMana.jsp</result>
+		</action>
+		<action name="gonggaoDetail" class="gonggaoAction" method="gonggaoDetail">
+			<result>/admin/gonggao/gonggaoDetail.jsp</result>
+		</action>
+		<action name="gonggaoDetailQian" class="gonggaoAction" method="gonggaoDetailQian">
+			<result>/qiantai/gonggao/gonggaoDetailQian.jsp</result>
+		</action>
+		<action name="gonggaoQian5" class="gonggaoAction" method="gonggaoQian5">
+			<result>/qiantai/gonggao/gonggaoQian5.jsp</result>
+		</action>
+
+		
+		<!-- czx add start-->
+		<action name="getTimuByWenjuanId1" class="wenjuanAction" method="getTimuByWenjuanId1">
+			<result>/qiantai/wenjuan/wenjuan_shunxu.jsp</result>
+		</action>
+		<action name="getTimuByWenjuanIdOne2" class="wenjuanAction" method="getTimuByWenjuanIdOne2">
+			<result>/qiantai/wenjuan/wenjuan_shunxu.jsp</result>
+		</action>
+		<action name="getAllSubjects" class="wenjuanAction" method="getAllSubjects">
+			<result>/admin/toupiao/select_subject.jsp</result>
+		</action>
+		<action name="subjectMana" class="toupiaoAction" method="subjectMana">
+			<result>/admin/toupiao/subjectMana.jsp</result>
+		</action>
+		<!-- czx add end-->
+		<action name="wenjuanAdd" class="wenjuanAction" method="wenjuanAdd">
+		</action>
+		<action name="wenjuanDel" class="wenjuanAction" method="wenjuanDel">
+		</action>
+		<action name="wenjuanMana" class="wenjuanAction" method="wenjuanMana">
+			<result>/admin/wenjuan/wenjuanMana.jsp</result>
+		</action>
+		<action name="wenjuan_search" class="wenjuanAction" method="wenjuan_search">
+			<result>/qiantai/wenjuan/wenjuan_search.jsp</result>
+		</action>
+		<action name="wenjuanDetailQian" class="wenjuanAction" method="wenjuanDetailQian">
+			<result>/qiantai/wenjuan/wenjuanDetailQian.jsp</result>
+		</action>
+		<action name="wenjuan_canyu" class="wenjuanAction" method="wenjuan_canyu">
+		</action>
+		<action name="wenjuan_jieguo" class="wenjuanAction" method="wenjuan_jieguo">
+			<result>/admin/wenjuan/wenjuan_jieguo.jsp</result>
+		</action>
+
+
+		<action name="toupiaoAdd" class="toupiaoAction" method="toupiaoAdd">
+		</action>
+		<action name="toupiaoDelete" class="toupiaoAction" method="toupiaoDelete">
+		</action>
+		<action name="toupiao_zhutu" class="toupiaoAction" method="toupiao_zhutu">
+			<result>/admin/toupiao/toupiao_zhutu.jsp</result>
+		</action>
+		
+		<!-- czx add start-->
+		<action name="toupiaoShunxuAdd" class="toupiaoAction" method="toupiaoShunxuAdd">
+		</action>
+		<action name="toupiaoTiaozhuanAdd" class="toupiaoAction" method="toupiaoTiaozhuanAdd">
+		</action>
+		<!-- czx add end-->
+		
+		<!--救助方法后台 -->
+		<action name="resueMethodlist" class="tRescueMethodAction" method="resueMethodlist">
+			<result>/admin/resue/resueMethod-list.jsp</result>
+		</action>
+		<action name="resueMethodAdd" class="tRescueMethodAction" method="resueMethodAdd">
+		</action>
+		<action name="resueMethodDel" class="tRescueMethodAction" method="resueMethodDel">
+		</action>
+		<!--救助方法前台 -->
+		<action name="resuelist" class="tRescueMethodAction" method="resuelist">
+			<result>/qiantai/resue/resue-list.jsp</result>
+		</action>
+		<action name="resueDetail" class="tRescueMethodAction" method="resueDetail">
+			<result>/qiantai/resue/resue-detail.jsp</result>
+		</action>
+		<!-- 志愿者后台 -->
+		<action name="volunteerlist" class="tVolunteerAction" method="volunteerlist">
+			<result>/admin/vol/vol-list.jsp</result>
+		</action>
+		<action name="volunteerAdd" class="tVolunteerAction" method="volunteerAdd">
+		</action>
+		<action name="volunteerDel" class="tVolunteerAction" method="volunteerDel">
+		</action>
+		<!-- 志愿者前台 -->
+		<action name="vollist" class="tVolunteerAction" method="vollist">
+			<result>/qiantai/vol/vol-list.jsp</result>
+		</action>
+	</package>
+</struts>
